@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --fuente1:'Oswald', sans-serif;
+    --fuente2:'Poppins', sans-serif;  
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 10px = 1rem*/
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: var(--fuente2);
+}
+img {
+    max-width: 100%; /*Para que las IMG sean responsive*/
+}
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.header {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f5f5f5;
+    padding: 7rem 0 ;
+}
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.logo {
+    font-size: 2.5rem;
+    color: #111111;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 1.8rem;
+    padding: 2rem;
+    color: #111111;
+    display: block;
+}
+#menu {
+    display: none;
+}
+.menu-icono {
+    width: 2.5rem;
+}
+.menu.label {
+    cursor: pointer;
+    display: none;
+}
+.submenu {
+    position: relative;
+}
+.submenu #carrito {
+    display: none;
+}
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(1rem);
+    top: 100%;
+    z-index: 1;
+    background-color: #4e4b5076;
+    padding: 2rem;
+    min-width: 40rem;
+}
+.table {
+    width: 100%;
+}
+th,td {
+    color: #fff;
+}
+.borrar {
+    background-color: #111111;
+    border-radius: 50%;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 0 20rem;
+}
+.header-img,
+.header-texto {
+     flex-basis: 50%;
+     text-align: center;
+}
+.header-texto h1 {
+    font-size: 9rem;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #111111;
+    font-family: var(--fuente1);
+    margin-bottom: 1.5rem;
+}
+.header-texto p {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.btn-1 {
+    display: inline-block;
+    padding: 1.1rem 2.5rem;
+    background-color: #111111;
+    color: #fff;
+    border-radius: .5rem;
+}
+.ofert {
+    padding:  2rem 0 0 0 ;
+    display: flex;
+    justify-content: space-between;
+}
+.ofert-1 {
+    display: flex;
+    align-items: center;
+    flex-basis: calc(33.3% - 1.5rem);
+    background-color: #f5f5f5;
+    padding: 3.5rem;
+}
+.ofert-img {
+    flex-basis: 50%;
+    margin-right: 1.5rem;
+}
+.ofert-img img {
+    width: 25rem;
+}
+.ofert-texto {
+    flex-basis: 50%;
+    text-align: center;
+}

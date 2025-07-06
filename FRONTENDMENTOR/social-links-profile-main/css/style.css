@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+
+:root {
+--green: hsl(75, 94%, 57%);
+--White: hsl(0, 0%, 100%);
+--grey: hsl(0, 0%, 20%);
+--greyBlack:  hsl(0, 0%, 8%);
+--lightGrey:  hsl(0, 0%, 12%);
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 10px = 1rem*/
+}
+*,*:after, *:before {
+    box-sizing: inherit;
+}
+body {
+    font-family: "Outfit", sans-serif;
+    background-color: var(--greyBlack);
+}
+.contenedor {
+    max-width: 120rem;
+    margin:0 auto;
+}
+.contenedor__card {
+    width: 80%;
+    background-color: var(--lightGrey);
+    height: 58rem;
+    margin: 5rem auto 2rem ;
+    border-radius: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media (min-width: 768px) {
+    .contenedor__card {
+        width: 38rem;
+    }
+}
+
+.card {
+    flex: 1;
+    padding: 3rem 0;
+}
+.card__img {
+    background-image: url(../assets/images/perfil.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.card__informacion {
+    text-align: center;
+}
+.card__titulo {
+    color: var(--White);
+    font-size: 2.5rem;
+}
+.card__origen {
+    color: var(--green);
+    font-size: 1.4rem;
+}
+.card__texto {
+    color: var(--White);
+    font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+    .card__texto {
+        font-size: 1.4rem;
+    }
+}
+.navegacion {
+    flex: 2;
+}
+.navegacion__redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.boton {
+    background-color: var(--grey);
+    width: 85%;
+    padding: 1.2rem 0;
+    color: var(--White);
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+    .boton {
+        width: 75%;
+        
+    }
+}
+
+.attribution { 
+    font-size: 1.2rem; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+ }
