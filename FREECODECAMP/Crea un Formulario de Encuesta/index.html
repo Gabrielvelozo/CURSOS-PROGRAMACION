@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 id="title" class="center">Practica -FreeCodeCamp-</h1>
+        <p id="description" class="center">Esto es una practica de FreecodeCamp</p>
+    </header>
+    <main>
+        <form id="survey-form">
+
+            <fieldset>
+                <label id="name-label">Nombre: <input value="name" type="text" required id="name" placeholder="Tu nombre"></label>
+                <label id="email-label">Email: <input value="email" type="email" required id="email" placeholder="Tu email"></label>
+                <label id="number-label">Edad: <input value="number" type="number" required id="number" min="15" max="99" step="1" placeholder="Tu edad"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Selecciona una lenguaje</legend>
+                <select id="dropdown">
+                    <option value="">Elige una opcion</option>
+                    <option value="1">HTML5</option>
+                    <option value="2">CSS</option>
+                </select>  
+            </fieldset>
+
+            <fieldset>
+                <input type="radio" name="lenguaje" value="1" checked> HTML5
+                <input type="radio" name="lenguaje" value="2"> CSS
+                <input type="radio" name="lenguaje" value="3"> JAVASCRIPT
+            </fieldset>
+            <fieldset>
+                <legend>Carrera a desarrolar</legend>
+                <input type="checkbox" name="profesion" value="1" checked> FrontEnd
+                <input type="checkbox" name="profesion" value="2"> BackEnd
+                <input type="checkbox" name="profesion" value="3"> DevOps
+                <input type="checkbox" name="profesion" value="4"> FullStack Developers
+            </fieldset>
+            <fieldset>
+                <legend>Ayudanos a conocer tus preferencias</legend>
+                <textarea id="" rows="3" cols="40" placeholder="Que tecnologias conoces o desearias aprender?....."></textarea>
+            </fieldset>
+            <input type="submit" id="submit" value="Enviar Formulario">
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.center {text-align: center;}
+body{
+    background-color: #333333;
+    font-family: Helvetica, sans-serif;
+}
+form{
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+label, legend {
+    color: #fbffe3;
+    font-weight: bold;
+}
+h1 {padding: 20px 0; color: #fbffe3; font-size: 35px;}
+p {padding-bottom: 25px; color: #fbffe3;}
+fieldset{
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #9e0c39;   
+}
+input, textarea { 
+   display: inline-block;
+   width: 100%;
+   padding: 8px;
+   margin: 8px 0;
+   background-color: #333333;
+   color: #fbffe3;
+   border-radius: 5px;
+}
+select{
+    padding: 8px;
+    background-color: #333333;
+    color: #fbffe3;
+    border-radius: 8px;
+}
+input[type="submit"]{
+    color: #9e0c39;
+    background-color: #fbffe3;
+    font-size: 16px;
+    font-weight: bold;
+}
+input[type="radio"],
+input[type="checkbox"]{
+ vertical-align: middle;
+ width: 3%;
+ margin-left: 8px;
+}
