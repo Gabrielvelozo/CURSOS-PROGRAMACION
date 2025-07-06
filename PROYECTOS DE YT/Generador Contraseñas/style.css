@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #0b132b;
+}
+.container {
+  font-family: "Cal Sans", sans-serif;
+  font-size: clamp(1rem, 5vw, 2rem);
+  margin: 0 auto;
+  display: grid;
+  place-content: center;
+}
+.password__caja {
+  margin-top: 10px;
+  width: clamp(300px, 100%, 1200px);
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 5px;
+  padding: 10px;
+}
+.password__titulo {
+  color: aliceblue;
+  margin-top: 20px;
+  border-bottom: 2px solid #f77f00;
+}
+.input__caja {
+  width: 100%;
+  margin: 50px 0 30px 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px;
+  color: #333;
+  border-radius: 5px;
+}
+.input {
+  width: 100%;
+  outline: 0;
+  border: 0;
+}
+.img {
+  width: 25px;
+  cursor: pointer;
+}
+.img:hover {
+  scale: 1.1;
+}
+.btn {
+  background-color: #f77f00;
+  padding: 13px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  opacity: 85%;
+}
+.btn:hover {
+  opacity: 100%;
+}

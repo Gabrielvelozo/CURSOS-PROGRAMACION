@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --dark-Mode: #070a13;
+    --ligth-Mode: #f1f5f9;
+}
+.dark-mode {
+    --ligth-Mode:#070a13;
+    --dark-Mode: #f1f5f9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height:  calc(1em +0.5rem);
+}
+html, body {
+    height: 100%;
+}
+body{
+    background-color: var(--ligth-Mode);
+    color: var(--dark-Mode);
+    width: 95% ;
+    max-width: 1200px;
+    font-family: "Cal Sans", sans-serif;
+    margin: 0 auto;
+    display:grid;
+    place-content: center;
+    place-items: center;
+    gap: 30px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.theme__toogle {
+ width: 100% ;   
+ color: inherit;
+ margin: 0 auto;
+}
+
+
+.theme__tile{
+    font-size: 40px;
+    text-align: center;
+}
+.theme__text {
+    text-align: center;
+    max-width: 60ch;
+    margin-top: 30px;
+}

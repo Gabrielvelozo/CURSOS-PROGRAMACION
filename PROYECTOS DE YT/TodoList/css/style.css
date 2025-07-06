@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --fuente1:'Oswald', sans-serif;
+    --fuente2:'Poppins', sans-serif; 
+    --color1: #2e1437;
+    --color2: #51425f;
+    --color3: #948e99;
+    --color4: #cad1c3;
+    --color5: #e7eed0;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 10px = 1rem*/
+    
+}
+*,*:after, *:before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+h1, span, #fecha {
+    color: var(--color4);
+}
+#nombre {
+    font-size: 2rem;
+}
+span, #fecha {
+    font-size: 1.2rem;
+    font-family: var(--fuente2);
+}
+body{
+    /* background: linear-gradient(to bottom,var(--purple),var(--lightBlue)); */
+    background-color: var(--color1);
+    height: 100vh;
+    font-family: var(--fuente1);
+}
+.container {
+    max-width: 80%;
+    width: 40rem;
+    height: 60rem;
+    margin: 0 auto;
+}
+/* Perfil */
+#fecha {
+    padding: 5rem 0 .5rem   0;
+}
+
+/* Agregar tarea */
+
+.agregar-tarea {
+    background-color: var(--color5);
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+    margin: 1rem 0;
+    height: 5rem;
+    padding: 1rem;
+    gap: 2rem;
+}
+.agregar-tarea input {
+    background-color: var(--color5);
+    border-style: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.agregar-tarea input::placeholder {
+    font-family: var(--fuente2);
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+.agregar-tarea i{
+    font-size: 2.5rem;
+    color: var(--color1);
+}
+.agregar-tarea i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Agregar-tarea */
+.tarea-titulo {
+    color: var(--color2);
+    margin: 2rem 0;
+    font-family: var(--fuente2);
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+.tarea-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color2);
+    /* background: linear-gradient(to bottom,var(--green),var(--darkBlue)) ; */
+    padding: 1rem;
+    border-radius: .5rem;
+    color: var(--color5);
+    font-family: var(--fuente2);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: .5rem;
+}
+.tarea-icon {
+    font-size: 1.5rem;
+}
+.tarea-icon:hover {
+    color: var(--color3);
+    cursor: pointer;
+}
+.line-through {
+    text-decoration: line-through;
+}

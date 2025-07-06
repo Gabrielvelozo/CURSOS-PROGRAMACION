@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    min-height: 100dvh;
+    display: grid;
+    place-content: center;
+    background-color: #111;
+}
+
+.swtich {
+    background-color: #ddd;
+    height: 50px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.input{
+   display: none;
+}
+.interrupttor {
+    height: 30px;
+    width: 90px;
+    background-color:azure;
+    position: relative;
+    border-radius: 15px;
+    position: relative;
+}
+.circle {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: #3c3;
+    border-radius: 50%;
+    left: 0;
+    transition: .4s;
+}
+.input:checked ~ .interrupttor .circle {
+    transform: translate(60px, 1%);
+}

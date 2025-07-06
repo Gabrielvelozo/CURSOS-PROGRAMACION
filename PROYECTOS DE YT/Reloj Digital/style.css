@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --color1: #cc2649;
+    --color2: #992c4b;
+    --color3: #66324c;
+    --color4: #33384e;
+    --color5: #003e4f;
+    --fuente: "Cal Sans", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background: linear-gradient(120deg, var(--color4), var(--color4));
+    width: clamp (300px, 100%, 1200px);
+    min-height: 100dvh;
+    font-size:  clamp(3rem, 3vw, 4rem);
+    color: azure;
+    font-family: var(--fuente);
+    display: grid;
+    place-content: center;
+}
+.reloj{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 8px solid var(--color2);
+    background:linear-gradient(100deg, var(--color1), var(--color2));
+    display: grid;
+    place-content: center;
+}

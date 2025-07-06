@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+h1{
+    font-family: "Cal Sans", sans-serif;
+    animation: type 3s steps(15);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 11ch;
+    border-right: 3px solid black;
+}
+@keyframes type {
+    0% {
+        width: 0ch;
+    }
+    100% {
+        width: 11ch;
+    }
+}
