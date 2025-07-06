@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=WDXL+Lubrifont+TC&display=swap');
+
+:root {
+    --Fuente: sans-serif;
+    --colorBtn: #f1c40f ;
+    --fuenteClima: "Lato", sans-serif;
+}
+
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+
+.container {
+    width: min(90%,1200px);
+    margin: 0 auto;
+}
+.clima__cointainer{
+    display: flex;
+    flex-direction: column;
+    width: min(90%,500px);
+    margin: 50px auto;
+    font-family: var(--Fuente);
+}
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.clima__box{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    font-family: var(--fuenteClima);
+}
+.clima__box span {
+    font-size: 30px;
+    font-weight: bold;
+}
+#ciudad{
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+.clima__datos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#pais {
+    padding: 10px;
+    outline: none;
+    appearance: none;
+    border-style: none;
+    border-radius: 8px;
+    background-color: #ddd;
+}
+.btn{
+    border-style: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--colorBtn);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.notificacion{
+    height: auto;
+    background-color: #e74c3c;
+    text-align: center;
+    padding: 5px;
+}
+.error {
+    color: #fff;
+}

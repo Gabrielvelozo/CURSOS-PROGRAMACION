@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.main {
+    width: min(50%,1200px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container input {
+    padding: 10px;
+}
+.btn {
+    width: 100px;
+    padding: 8px;
+    outline: none;
+    border-style: none;
+    border-radius: 8px;
+}
+#resultado {
+    font-size: 18px;
+}

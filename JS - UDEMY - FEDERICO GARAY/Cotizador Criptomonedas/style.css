@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=WDXL+Lubrifont+TC&display=swap');
+
+:root{
+  --dark-Mode: #070a13;
+  --ligth-Mode: #f1f5f9;
+
+  --funtePrincipal: "Outfit", sans-serif;
+  --fuenteSecundaria: "Roboto", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.dark {
+    --ligth-Mode:#070a13;
+    --dark-Mode: #f1f5f9;
+}
+body{
+    background-color: var(--ligth-Mode);
+}
+.container{
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+.btn{
+    border-radius: 50%;
+    border-style: none;
+    font-size: 12px;
+    width: 50px;
+    height: 50px;
+    background-color: inherit;
+    cursor: pointer;
+    color: var(--dark-Mode);
+    font-weight: bold;
+}
+.header{
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color:var(--dark-Mode);
+    font-family: var(--funtePrincipal);
+    font-weight: bold;
+}
+
+.cambio__box{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.cambio {
+    border-style: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--dark-Mode);
+    color: var(--ligth-Mode);
+    font-weight: 600;
+    font-family: var(--fuenteSecundaria);
+}
+.cambio:hover {
+    opacity: 80%;
+}
+.coin__box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+.coin {
+    width: 80%;
+    height: 70px;
+    border-radius: 6px;
+    border: .5px solid #616a6b;
+    color: var(--dark-Mode);
+    font-family: var(--fuenteSecundaria);
+    padding: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ .green {
+    color: green;
+ }
+ .red {
+    color: red;
+ }

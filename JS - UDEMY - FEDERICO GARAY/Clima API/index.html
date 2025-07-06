@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Clima API</title>
+</head>
+<body>
+
+    <main class="container">
+
+        <div class="clima__cointainer">
+             <h1 class="title">CONSULTA EL CLIMA</h1>
+            <div class="clima__box"></div>
+            <div class="clima__datos" id="resultado">
+                <input type="text" placeholder="Escribe tu Ciudad" id="ciudad">
+                <select  id="pais">
+                    <option disabled selected value>-- Seleccione --</option>
+                    <option value="AR">Argentina</option>
+                    <option value="CO">Colombia</option>
+                    <option value="CR">Costa Rica</option>
+                    <option value="ES">España</option>
+                    <option value="EU">Estados Unidos</option>
+                    <option value="MX">Mexico</option>
+                    <option value="PE">Peru</option>
+                </select>
+                <button class="btn">Obtner Clima</button>
+                <div id="alert"></div>
+            </div>    
+        </div> 
+    </main>
+    
+    <script src="app.js"></script>  
+</body>
+</html>

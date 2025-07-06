@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.container {
+    width: min(90%, 1200px);
+    min-height: 100dvh;
+    display: grid;
+    place-content: center;
+    margin: 0 auto;
+}
+.counter__box{
+    width: 300px;
+    max-width: 600px;
+    height: 200px;
+    background-color: #5f5a62;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+    border-radius:10px ;
+}
+.counter__title {
+    font-size: 55px;
+    color: aliceblue;
+}
+.buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.btn {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #211f23;
+    border: 2px solid #211f23;
+    cursor: pointer;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+}
+.btn--disable {
+    pointer-events: none;
+    background-color: transparent;
+    border:  2px solid aliceblue;
+}
+

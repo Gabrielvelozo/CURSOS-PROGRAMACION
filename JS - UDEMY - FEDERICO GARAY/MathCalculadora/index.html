@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Math- Calculadora</title>
+  </head>
+  <body>
+
+    <main class="container">
+      <button class="theme">Dark</button>
+
+      <div class="calc__box">
+
+        <div class="display__box">
+          <input class="display" type="number" id="number1" placeholder="Ingresa un número">
+          <input class="display" type="number" id="number2" placeholder="Ingresa un número">
+        </div>
+
+        <div class="operation__box">
+
+          <button class="btn plus">+</button>
+          <button class="btn minus">-</button>
+          <button class="btn multiplicar">X</button>
+          <button class="btn dividir">/</button>
+          <button class="btn potencia">potencia</button>
+          <button class="btn raiz">raiz</button>
+          <button class="btn absoluto">absoluto</button>
+          <button class="btn random">random</button>
+
+        </div>
+
+        <div class="display display--resultado" >
+          <p class="text" id="resultado"></p>
+        </div>
+
+        <div class="extras">
+
+          <button class="btn round">round</button>
+          <button class="btn floor">floor</button>
+          <button class="btn ceil">ceil</button>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <script src="app.js"></script>
+
+  </body>
+</html>
