@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="../output.css" />
+    <title>Tailwind</title>
+  </head>
+  <body class="bg-[#acf9fa] h-screen max-w-7xl m-auto font-sans">
+    <header class="flex justify-between p-3">
+      <span class="font-bold uppercase">Tailwind</span>
+      <nav>
+        <ul class="flex gap-4 text-gray-400/70">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Acerca de</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="flex flex-col items-center mt-6 md:flex-row justify-center gap-20 transition-all duration-300 ease-in-out">
+      <section class="text-center md:text-left">
+        <a>
+          <iconify-icon icon="vscode-icons:file-type-tailwind" width="125px" height="125px"></iconify-icon>
+        </a>
+        <h1 class="text-5xl font-bold mb-5 md:text-left">Entrenamos?</h1>
+        <span class="text-gray-600/80">
+          Tailwind es
+          <br />
+          <span class="text-gray-700/70 font-bold">Cool!</span>
+        </span>
+        <button class="hover:scale-110 transition-transform duration-300 ease-in-out md:ml-0 m-auto block py-2 rouded-full cursor-pointer px-6 my-4 bg-black text-white rounded-2xl hover:bg-gray-950/70">Entrenar</button>
+      </section>
+      <img class="md:h-120 h-90 object-cover" src="./vegta01.png" alt="" />
+    </main>
+    <footer class="fixed bottom-0 text-center w-full p-3">
+      <span class="text-gray-800">Tailwind Page | Company</span>
+    </footer>
+  </body>
+</html>
