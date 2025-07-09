@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="../output.css" />
+    <title>Carrito</title>
+  </head>
+  <body class="bg-stone-900 h-screen max-w-7xl m-auto">
+    <header class="text-white flex flex-col items-center p-3">
+      <span class="font-bold text-2xl hover:text-red-500/80 cursor-pointer transition duration-300 ease-in-out mb-6">{ saiyanin }</span>
+      <nav class="flex items-center gap-3">
+        <a href="#">Goku</a>
+        <a href="#">Vegeta</a>
+        <a class="flex items-center" href="#">
+          <iconify-icon icon="flowbite:cart-solid" width="24" height="24"></iconify-icon>
+        </a>
+      </nav>
+    </header>
+    <main class="mt-10">
+      <section id="shop" class="flex flex-col m-auto md:flex-row md:flex-wrap gap-2 transition-all duration-300 ease-in-out"></section>
+    </main>
+    <footer class="flex justify-center p-6 text-white">
+      <article>
+        <span>Tienda Z</span>
+        <span>|</span>
+        <span>Tailwind & Carrito</span>
+      </article>
+    </footer>
+    <script src="./bd.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
