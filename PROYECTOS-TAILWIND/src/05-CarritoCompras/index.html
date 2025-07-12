@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="../output.css" />
+    <title>CarritoCompras</title>
+  </head>
+  <body class="max-w-7xl m-auto h-screen font-mono">
+    <header class="text-gray-500/80 text-center my-6">
+      <h1 class="text-4xl md:text-5xl font-bold">Carrito de Compras</h1>
+    </header>
+    <main class="grid grid-cols-1 md:grid-cols-[2fr_1fr] p-5 gap-4">
+      <section class="layout flex gap-2 border-b pb-5">
+        <!-- Tienda layout -->
+         <div class="item flex flex-col items-center gap-3">
+          <img  class="img" src="./assets/product-1.jpg">
+              <h3 class="title">Camiseta</h3>
+              <p class="text-gray-500 font-bold price">$ 14.99</p>
+              <button class="bg-sky-600 block w-full m-auto hover:underline rounded-[5px]  py-1 cursor-pointer text-gray-200/80 hover:scale-99 transition-all duration-300 ease-in-out add-cart">Comprar</button>
+         </div>
+         <div class="item flex flex-col items-center gap-3">
+          <img  class="img" src="./assets/product-2.jpg">
+              <h3 class="title">Camara</h3>
+              <p class="text-gray-500 font-bold price">$ 315.99</p>
+              <button class="bg-sky-600 block w-full m-auto hover:underline rounded-[5px]  py-1 cursor-pointer text-gray-200/80 hover:scale-99 transition-all duration-300 ease-in-out add-cart">Comprar</button>
+         </div>
+         <div class="item flex flex-col items-center gap-3">
+          <img  class="img" src="./assets/product-3.jpg">
+              <h3 class="title">Portatil</h3>
+              <p class="text-gray-500 font-bold price">$ 979.99</p>
+              <button class="bg-sky-600 block w-full m-auto hover:underline rounded-[5px]  py-1 cursor-pointer text-gray-200/80 hover:scale-99 transition-all duration-300 ease-in-out add-cart">Comprar</button>
+         </div>
+         <div class="item flex flex-col items-center gap-3 ">
+          <img  class="img " src="./assets/product-4.jpg">
+              <h3 class="title">Zapatillas</h3>
+              <p class="text-gray-500 font-bold price">$ 59.99</p>
+              <button class="bg-sky-600 block w-full m-auto hover:underline rounded-[5px]  py-1 cursor-pointer text-gray-200/80 hover:scale-99 transition-all duration-300 ease-in-out add-cart">Comprar</button>
+         </div>
+      </section>
+      <aside class="">
+        <div class="flex justify-center gap-2">
+          <h3>Carrito</h3>
+          <iconify-icon icon="flowbite:cart-solid" width="24" height="24"></iconify-icon>
+        </div>
+        <div class="grid grid-cols-5  text-center">
+          <div class="col-span-2">
+            <p class="">Producto</p>
+          </div>
+          <div class="col-span-1">
+            <p class="">Precio</p>
+          </div>
+          <div>
+            <p class="">Cantidad</p>
+          </div>
+        </div>
+        <div class="shop-container">
+            <div class="carrito">
+            <!-- Productos -->
+          </div>
+          <div class="flex justify-between items-center mt-6">
+            <p class="total text-gray-600/80 font-bold">Total: 0 <span>$</span></p>
+            <button class="bg-sky-600 rounded-lg text-white p-1 cursor-pointer transition duration-300 ease-linear finishcard">Confirmar Compra</button>
+          </div> 
+        </div>
+      </aside>
+    </main>
+    <script src="./app.js"></script>
+    <script type="module" src="./tienda.js"></script>
+  </body>
+</html>
