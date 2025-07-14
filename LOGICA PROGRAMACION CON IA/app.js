@@ -1,4 +1,4 @@
-// ! NIVEL FACIL
+// ! NIVEL FÁCIL
 /*
 ? Pide al usuario dos números y muestra la suma.
 let user1 = prompt('Ingrese un numero: ');
@@ -69,8 +69,8 @@ console.log(`Factorial: ${factorial}`);
 */
 
 /*
-? Determina si una palabra es palíndromo (se lee igual al revés, como "reconocer").
-let palabra = prompt('Ingresa una palabra, para saber si es palindromo: ');
+? Determina si una palabra es palindrome (se lee igual al revés, como "reconocer").
+let palabra = prompt('Ingresa una palabra, para saber si es palindrome: ');
 console.log(palabra);
 // let minuscula = palabra.toLocaleLowerCase();
 // console.log(minuscula);
@@ -118,7 +118,7 @@ isVocales(user);
 /* 
 ? Genera un número aleatorio entre 1 y 100 y permite al usuario adivinarlo con pistas ("mayor" o "menor").
 const random = Math.floor(Math.random() * 101);
-console.log(`** Maquinda: ${random} **`);
+console.log(`** Maquina: ${random} **`);
 
 let user = parseInt(prompt('Adivina el numero: '));
 
@@ -133,3 +133,116 @@ while (user != random) {
 
 console.log(`ADIVINASTE ** Maquina: ${random} **`);
 */
+//! PRACTICA CARRITO
+//? Ejercicio 1: Crear la lista de productos
+const productos = [
+  {
+    id: 0,
+    nombre: 'Camisa',
+    precio: 20,
+    stock: 10,
+  },
+  {
+    id: 1,
+    nombre: 'Jean',
+    precio: 12,
+    stock: 20,
+  },
+  {
+    id: 2,
+    nombre: 'Remera',
+    precio: 12,
+    stock: 11,
+  },
+  {
+    id: 3,
+    nombre: 'Buzo',
+    precio: 25,
+    stock: 15,
+  },
+  {
+    id: 4,
+    nombre: 'Short',
+    precio: 8,
+    stock: 19,
+  },
+  {
+    id: 5,
+    nombre: 'Medias',
+    precio: 14,
+    stock: 10,
+  },
+];
+
+//? Ejercicio 2: Mostrar productos en consola
+//! forEach
+// productos.forEach((art) => {
+//   const { id, nombre, precio, stock } = art;
+//   console.log(`${id} - ${nombre} - $${precio} `);
+// });
+//! map
+// productos.map((art) => {
+//   const { id, nombre, precio, stock } = art;
+//   console.log(`${id} - ${nombre} - ${precio}`);
+// });
+
+//? Ejercicio 3: Función para buscar un producto por ID
+// Crea una función buscarProducto(id) que retorne el producto o null si no existe.
+
+// function buscarProducto(id) {
+//   const producto = productos.find((art) => art.id === id);
+//   return producto ? console.log(producto) : console.log(null);
+// }
+// buscarProducto(1);
+
+//? Ejercicio 4: Crear el carrito
+// Declara un array vacío carrito que almacenará objetos con { id, nombre, precio, cantidad }.
+const carrito = [];
+
+//? Ejercicio 5: Añadir productos al carrito
+
+function agregarAlCarrito(id, cantidad) {
+  // Busca el producto x id.
+  const producto = productos.find((art) => art.id === id);
+  // Si existe, añádelo al carrito (o incrementa la cantidad si ya está).
+  if (producto) {
+    const productoEnCarrito = carrito.find((item) => item.id === id && item.stock >= cantidad);
+    if (productoEnCarrito) {
+      productoEnCarrito.cantidad += cantidad;
+    } else {
+      carrito.push({ ...producto, cantidad });
+    }
+  } else {
+    console.log('Producto no encontrado');
+  }
+}
+
+agregarAlCarrito(0, 1);
+
+console.table(carrito);
+
+//? Ejercicio 6: Mostrar el carrito en consola
+// Imprime cada item del carrito y el total a pagar. Ejemplo:
+
+function imprimirTicket() {
+  let imprimir = `    - CARRITO - \n`;
+  let total = 0;
+  carrito.forEach((producto) => {
+    const { cantidad, nombre, precio } = producto;
+    imprimir += ` ${cantidad} - X ${nombre}: $ ${precio * cantidad} \n`;
+    total += precio * cantidad;
+  });
+  imprimir += `\n     TOTAL : $ ${total}`;
+  console.table(imprimir);
+}
+imprimirTicket();
+
+//? Ejercicio 7: Eliminar Productos
+
+function eliminarDelCarrito(id) {
+  carrito.splice(id, 1);
+  return carrito;
+}
+eliminarDelCarrito();
+
+//? Ejercicio 8: Descuentos
