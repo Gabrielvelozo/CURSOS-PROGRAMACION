@@ -27,7 +27,7 @@ isPar(user1);
  a = 5;
  b = 12;
  c = 12;
- 
+
  let mayor;
  if (a > b && a > c) {
   mayor = a;
@@ -115,7 +115,7 @@ function isVocales(palabra) {
 isVocales(user);
 */
 
-/* 
+/*
 ? Genera un número aleatorio entre 1 y 100 y permite al usuario adivinarlo con pistas ("mayor" o "menor").
 const random = Math.floor(Math.random() * 101);
 console.log(`** Maquina: ${random} **`);
@@ -173,7 +173,7 @@ const productos = [
     stock: 10,
   },
 ];
-
+console.table(productos);
 //? Ejercicio 2: Mostrar productos en consola
 //! forEach
 // productos.forEach((art) => {
@@ -197,27 +197,35 @@ const productos = [
 
 //? Ejercicio 4: Crear el carrito
 // Declara un array vacío carrito que almacenará objetos con { id, nombre, precio, cantidad }.
-const carrito = [];
+let carrito = [];
 
 //? Ejercicio 5: Añadir productos al carrito
 
 function agregarAlCarrito(id, cantidad) {
   // Busca el producto x id.
-  const producto = productos.find((art) => art.id === id);
+  const producto = productos.find((art) => art.id === id && art.stock >= cantidad);
+
   // Si existe, añádelo al carrito (o incrementa la cantidad si ya está).
   if (producto) {
-    const productoEnCarrito = carrito.find((item) => item.id === id && item.stock >= cantidad);
+    const productoEnCarrito = carrito.find((item) => item.id === id);
+
     if (productoEnCarrito) {
+      console.log('****');
       productoEnCarrito.cantidad += cantidad;
     } else {
       carrito.push({ ...producto, cantidad });
+      //? Ejercicio 9: Validar Stock
+      // Verifica producto.stock >= cantidad antes de agregar.
+      productos[id].stock -= cantidad; // Reduce el stock del producto
     }
   } else {
     console.log('Producto no encontrado');
   }
 }
 
-agregarAlCarrito(0, 1);
+agregarAlCarrito(1, 3);
+
+console.table(productos);
 
 console.table(carrito);
 
@@ -227,12 +235,19 @@ console.table(carrito);
 function imprimirTicket() {
   let imprimir = `    - CARRITO - \n`;
   let total = 0;
+  let descuento = 0;
   carrito.forEach((producto) => {
     const { cantidad, nombre, precio } = producto;
     imprimir += ` ${cantidad} - X ${nombre}: $ ${precio * cantidad} \n`;
     total += precio * cantidad;
   });
-  imprimir += `\n     TOTAL : $ ${total}`;
+
+  //? Ejercicio 8: Descuentos
+  // Aplica 10% de descuento si el total > $100.
+  if (total > 100) {
+    descuento = total * 0.1;
+  }
+  imprimir += `\n     SUBTOTAL : $ ${total} \n     DESCUENTO : $ ${descuento}  \n     TOTAL : $ ${total - descuento}`;
   console.table(imprimir);
 }
 imprimirTicket();
@@ -245,4 +260,22 @@ function eliminarDelCarrito(id) {
 }
 eliminarDelCarrito();
 
-//? Ejercicio 8: Descuentos
+//? Ejercicio 11: Vaciar Carrito
+// Función vaciarCarrito() que reinicie el array y el localStorage.
+// function vaciarCarrito() {
+//   carrito = [];
+// }
+
+// vaciarCarrito();
+
+// console.log(carrito, ' ultimo');
+// imprimirTicket();
+
+//? Ejercicio 10: localStorage
+// Guarda/recupera el carrito con localStorage.
+localStorage.setItem('carrito', JSON.stringify(carrito));
+
+// Recuperar datos LocalStorage
+const datosGuardados = localStorage.getItem('carrito');
+const carritoGuardado = JSON.parse(datosGuardados);
+console.table(carritoGuardado);

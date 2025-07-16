@@ -1,117 +1,73 @@
-###### Practicando Logica
+## PRACTICANDO CARRITO DE COMPRAS.
 
-> Nivel Fácil
+#### Con los tips mencionados por [Deepseek](https://www.deepseek.com/)
 
-```
-// Pide al usuario dos números y muestra la suma.
-let user1 = prompt('Ingrese un numero: ');
- let user2 = prompt('Ingrese un numero: ');
- let resultado = Number(user1) + Number(user2);
- console.log(resultado);
+Nivel 1: Estructura básica y funcionalidades iniciales
+Objetivo: Manipular arrays y objetos para almacenar productos y mostrarlos.
 
-// Verificar par o impar, pide un número y determina si es par o impar.
-let user1 = parseInt(prompt('Ingrese un numero: '));
+Ejercicio 1: Crear la lista de productos
+Define un array de objetos productos, donde cada objeto tenga:
 
-function isPar(dato) {
-  if (dato % 2 == 0) {
-    console.log('Es par');
-  } else {
-    console.log('No es par');
-  }
-}
-isPar(user1);
+javascript
+{ id: 1, nombre: "Camisa", precio: 20, stock: 10 }
+Tip: Usa console.log para imprimir la lista.
 
-// Dados tres números, identifica cuál es el mayor.
- let a, b, c;
- a = 5;
- b = 12;
- c = 12;
+Ejercicio 2: Mostrar productos en consola
+Recorre el array con forEach o map y muestra cada producto en formato:
+"1 - Camisa - $20".
 
- let mayor;
- if (a > b && a > c) {
-  mayor = a;
-} else if (b > a && b > c) {
-  mayor = b;
-} else {
-  mayor = c;
-}
-console.log(`mayor: ${mayor}`);
+Ejercicio 3: Función para buscar un producto por ID
+Crea una función buscarProducto(id) que retorne el producto o null si no existe.
 
-// Convierte grados Celsius a Fahrenheit (F = C × 9/5 + 32).
-const grados = parseInt(prompt('ingresar los grados: '));
-let convertir = (grados * 9) / 5 + 32;
-console.log(convertir);
+Tip: Usa el método find.
 
-// Pide una palabra y muestra cuántas letras tiene.
-let palabra = prompt('Ingresa una palabra: ');
-let contarLetras = palabra.length;
-console.log(contarLetras);
-```
+Nivel 2: Carrito y operaciones básicas
+Objetivo: Gestionar un carrito usando funciones.
 
-> Nivel intermedio
+Ejercicio 4: Crear el carrito
+Declara un array vacío carrito que almacenará objetos con { id, nombre, precio, cantidad }.
 
-```
+Ejercicio 5: Añadir productos al carrito
+Función agregarAlCarrito(id, cantidad):
 
-// Calcula el factorial de un número ingresado (ej: 5! = 5 × 4 × 3 × 2 × 1 = 120).
-let user = parseInt(prompt('Ingresa un número: '), 10);
+Busca el producto por ID.
 
-let factorial = 1;
+Si existe, añádelo al carrito (o incrementa la cantidad si ya está).
 
-for (let i = 1; i <= user; i++) {
-  factorial *= i;
-  console.log(factorial);
-}
-console.log(`Factorial: ${factorial}`);
+Tip: Usa some o findIndex para verificar si el producto ya está en el carrito.
 
-// Determina si una palabra es palíndromo (se lee igual al revés, como "reconocer").
-let user = prompt('¿Es pálindromo?: ');
+Ejercicio 6: Mostrar el carrito en consola
+Imprime cada item del carrito y el total a pagar. Ejemplo:
 
+text
+Carrito:  
+2 x Camisa - $40  
+Total: $40
+Nivel 3: Funcionalidades avanzadas
+Objetivo: Implementar lógica más compleja.
 
-// Muestra los primeros n números de la secuencia (0, 1, 1, 2, 3, 5, 8...).
-const secuencia = [0, 1, 1, 2, 3, 5, 8];
+Ejercicio 7: Eliminar productos del carrito
+Función eliminarDelCarrito(id): Elimina un producto por ID.
 
-let user = parseInt(prompt('Ingrese cuantos n desea ver....'));
-let mostrar = [];
+Tip: Filtra el array con filter.
 
-for (let i = 0; i < user; i++) {
-  mostrar.push(secuencia[i]);
-}
-alert(`Numero seleccionados ${user} a mostrar: ${mostrar}`);
+Ejercicio 8: Calcular descuentos
+Si el total supera $100, aplica un 10% de descuento.
 
-// Pide una frase y cuenta cuántas vocales (a, e, i, o, u) tiene.
-const user = prompt('Ingrese una frase: ');
+Tip: Usa una condición en la función que calcula el total.
 
-function isVocales(palabra) {
-  let contador = 0;
-  let vocales = 'aeiouAEIOU';
-  for (let i = 0; i < palabra.length; i++) {
-    if (vocales.includes(palabra[i])) {
-      contador++;
-    }
-  }
-  return alert(
-    `La cantidad de vocales de la palabra ${palabra} son: ${contador}`
-  );
-}
-isVocales(user);
+Ejercicio 9: Validar stock al agregar
+Antes de añadir al carrito, verifica que haya suficiente stock.
 
+Tip: Compara la cantidad solicitada con producto.stock.
 
-// Genera un número aleatorio entre 1 y 100 y permite al usuario adivinarlo con pistas ("mayor" o "menor").
+Nivel 4: Persistencia y optimización
+Objetivo: Mejorar la experiencia de usuario.
 
-const random = Math.floor(Math.random() * 101);
-console.log(`** Maquinda: ${random} **`);
+Ejercicio 10: Guardar carrito en localStorage
+Al recargar la página, el carrito debe mantenerse.
 
-let user = parseInt(prompt('Adivina el numero: '));
+Tip: Usa localStorage.setItem() y JSON.stringify().
 
-while (user != random) {
-  if (user < random) {
-    console.log('ES MENOR');
-  } else {
-    console.log('ES MAYOR');
-  }
-  user = parseInt(prompt('Adivina el número: '));
-}
-
-console.log(`ADIVINASTE ** Maquina: ${random} **`);
-
-```
+Ejercicio 11: Vaciar el carrito
+Función vaciarCarrito() que reinicie el array y actualice el localStorage.
